@@ -1,0 +1,53 @@
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+\usepackage[utf8]{inputenc}
+
+\usepackage{float}
+
+%% unidades, isótopos, notación física
+\usepackage[locale=FR, per-mode=fraction, separate-uncertainty=true]{siunitx}
+\sisetup{detect-all}
+%\DeclareSIUnit\torr{torr}
+%\DeclareSIUnit\atm{atm}
+%\usepackage{isotope} % $\isotope[A][Z]{X}\to\isotope[A-4][Z-2]{Y}+\isotope[4][2]{\alpha}$
+\usepackage[arrowdel]{physics}
+
+\usepackage{amsmath}
+\usepackage{amstext}
+\usepackage{amssymb}
+
+\usepackage{booktabs} % table rules
+
+\usepackage{graphicx}
+\graphicspath{{./graphs/}}
+
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{patterns}
+% \input{DimLinesTikz}
+
+\usepackage[margin=1.3cm,nohead]{geometry}
+
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead{}
+% \fancyfoot{{\tiny \textcopyright V. A. Bettachini}}
+\fancyfoot{{Víctor A. Bettachini}}
+% \fancyfoot{{\tiny \textcopyright Universidad Provincial de Ezeiza}}
+\fancyfoot[C]{ Visualización de datos | TP 1 }
+\fancyfoot[R]{ \today}
+% \fancyfoot[R]{Pág. \thepage/\pageref{LastPage}}
+% \fancyfoot[RO, LE]{Pág. \thepage/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\usepackage{hyperref}	% enlaces sin borde rojo y en negro
+\hypersetup{ 
+    colorlinks=true,
+    allcolors= black
+}
+
+
+\usepackage{multicol}	% tablas de multiples columnas
+
