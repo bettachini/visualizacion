@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Mini-Challenge 3:</title>
+
+<script src="site_libs/header-attrs-2.26/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/lumen.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">VAST Challenge 2024</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="MC1.html">MC1</a>
+</li>
+<li>
+  <a href="MC2.html">MC2</a>
+</li>
+<li>
+  <a href="MC3.html">MC3</a>
+</li>
+<li>
+  <a href="GC.html">Grand Challenge</a>
+</li>
+<li>
+  <a href="submissions.html">Submissions</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+<li>
+  <a href="contact.html">Contact</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Mini-Challenge 3:</h1>
+
+</div>
+
+
+<!-- <div style="text-align:center; padding:10px;">![](img/MC3.jpg){width=70%} </div> -->
+<div id="background" class="section level2">
+<h2>Background</h2>
+<p>The business community in Oceanus is dynamic with new startups,
+mergers, acquisitions, and investments. FishEye International closely
+watches business records to keep tabs on commercial fishing operators.
+FishEye’s goal is to identify and prevent illegal fishing in the
+region’s sensitive marine ecosystem. Analysts are working with company
+records that show ownership, shareholders, transactions, and information
+about the typical products and services of each entity. FishEye’s
+analysts have a hybrid automated/manual process to transform the data
+into CatchNet: the Oceanus Knowledge Graph.</p>
+<p>In the past year, Oceanus’s commercial fishing business community was
+rocked by the news that SouthSeafood Express Corp was caught fishing
+illegally. FishEye wants to understand temporal patterns and infer what
+may be happening in Oceanus’s fishing marketplace because of
+SouthSeafood Express Corp’s illegal behavior and eventual closure. The
+competitive nature of Oceanus’s fishing market may cause some businesses
+to react aggressively to capture SouthSeafood Express Corp’s business
+while other reactions may come from the awareness that illegal fishing
+does not go undetected and unpunished.</p>
+</div>
+<div id="tasks-and-questions" class="section level2">
+<h2>Tasks and Questions:</h2>
+<p>A key element in stopping illegal fishing is holding the people who
+own nefarious companies accountable. Thus, FishEye is keenly interested
+in developing visualization tools that work with CatchNet to identify
+the people who hold influence over business networks. That is especially
+difficult with varied and changing shareholder and ownership
+relationships.</p>
+<ol style="list-style-type: decimal">
+<li><p>FishEye analysts want to better visualize changes in corporate
+structures over time. Create a visual analytics approach that analysts
+can use to highlight temporal patterns and changes in corporate
+structures. Examine the most active people and businesses using visual
+analytics.</p></li>
+<li><p>Using your visualizations, find and display examples of typical
+and atypical business transactions (e.g., mergers, acquisitions, etc.).
+Can you infer the motivations behind changes in their activity?</p></li>
+<li><p>Develop a visual approach to examine inferences. Infer how the
+influence of a company changes through time. Can you infer ownership or
+influence that a network may have?</p></li>
+<li><p>Identify the network associated with SouthSeafood Express Corp
+and visualize how this network and competing businesses change as a
+result of their illegal fishing behavior. Which companies benefited from
+SouthSeafood Express Corp legal troubles? Are there other suspicious
+transactions that may be related to illegal fishing? Provide visual
+evidence for your conclusions.</p></li>
+</ol>
+<p>Note: the VAST challenge is focused on visual analytics and graphical
+figures should be included with your response to each question. Please
+include a reasonable number of figures for each question (no more than
+about 6) and keep written responses as brief as possible (around 250
+words per question). Participants are encouraged to new visual
+representations rather than relying on traditional or existing
+approaches.</p>
+<p><strong>Reflection Questions</strong></p>
+<ul>
+<li><p>Which version of the data did you choose to work with and why?
+Did you download more than one version and change course during the
+challenge?</p></li>
+<li><p>Given the task to develop visualizations for knowledge graphs,
+did you find that the challenge pushed you to develop new techniques for
+visual representation?</p></li>
+<li><p>Did you participate in last year’s challenge? If so, did your
+experience last year help prepare you for this year’s
+challenge?</p></li>
+<li><p>What was the most difficult part of working on this year’s data
+and what could have made it more accessible?</p></li>
+</ul>
+</div>
+<div id="download-the-submission-form-and-the-data"
+class="section level2">
+<h2>Download the Submission Form and the Data</h2>
+<p><a href="submissions.html">VAST 2024 Submission Instructions</a></p>
+<p><em>All VAST data is fully synthetic. Any resemblance to real people,
+places, or events is purely coincidental. Some elements of the 2024 VAST
+Challenge resemble data released for the 2023 VAST Challenge.
+Participants should not assume that there is any continuity and should
+not use any earlier or any external data for their submission.
+Mini-Challenge participants should only use data supplied for this
+mini-challenge in their submission. Data from other challenges should
+not be combined, except in the Grand Challenge.</em></p>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdKGo0S-HY0drn_MQywhnAqscfex9ML5EMuk6e1XEGwbyV1XA/viewform?embedded=true" width="640" height="509" frameborder="0" marginheight="0" marginwidth="0">
+Loading…
+</iframe>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
