@@ -1,0 +1,140 @@
+\documentclass[11pt,spanish,a4paper]{article}
+% Versión 1.er cuat 2017 Víctor Bettachini < victorb@gmx.net >
+
+\input{introModerno}
+
+\begin{document}
+\begin{center}
+  \textsc{\large Trabajo final Visualización}\\
+	Grupo 2
+\end{center}
+
+\section{Reto VAST 2024}
+El objetio del reto anual de tecnología y siencia del análisis visual (Visual Analytics Science and Technology ,VAST), del Instituto de ingeniería eléctrica y electrónica (IEEE) es avanza el cambio a través de la competencia 
+Es una actividad realizada en conjunto con la conferencia de visualización VIS de la IEEE.
+
+En su página para el reto de este año se da un contexto ficticio para el reto.
+ \cite{noauthor_vast_nodate}.
+En un espacio geográfico llamado \emph{Oceanus} donde se produce pesca ilegal.
+Una organización sin fines de lucro denominada \emph{FishEye} se enfoca en la problemática.
+Han generado un grafo a partir de múltiples fuentes de datos estructurados o no.
+Se pide desarrollar herramientas de análisis visual aplicado a gráfos de conocimientos para identificar sesgos, ratrear cambios de comportamiento e inferir patrones temporales.
+
+\paragraph*{Visión de conjunto}
+En este párrafo se identica 
+\begin{itemize}
+	\item Unas pocas compañías transgreden líneas éticas.
+	\item FishEye procesó datos de diversas fuentes para condensarles en un grafo denominado \emph{CatchNet, el grafo de conocimiento de Oceanus}.
+\end{itemize}
+
+A continuación figuran títulos sobre cuatro distintos mini-retos.
+El elegido por este grupo es el tercero por lo que se resume lo que dice el párrafo correspondiente:
+
+\paragraph*{Mini-reto 3: análisis temporal}
+\begin{itemize}
+	\item Visualizar cambios en relaciones comerciales en la industria pesquera.
+	\item Entender cómo reaccionan las empresas al cierre de un competidor que pesca ilegalmente.
+	\item Diseñar visualizaciones para mostrar estos cambios y identificar empresas que se beneficien de la pesca ilegal.
+\end{itemize}
+
+
+\section{Detalle sobre el mini-reto 3}
+En la página hay un enlace donde se anuncia mayor detalle sobre el mini-reto 3.
+Se divide en tres secciones: trasfondo, tareas y preguntas, pedidos de clarificación y un formulario para envío de trabajos y acceder a los datos.
+
+\subsection{Trasfondo}
+Se resumen enlos siguientes puntos:
+\begin{itemize}
+	\item Analístas de FishEye trabajan con registros de empresas que muestran:
+	\begin{itemize}
+		\item propietarios (ownership),
+		\item Accionistas (shareholders),
+		\item Transacciones,
+		\item Productos y servicios típico de cada entidad
+	\end{itemize}
+	y estos se transforman en el grafo de conocimiento \emph{CatchNet}.
+	\item En el último año la empresa \emph{SouthSeafood Express Corp} fue descubierta pescando ilegalmente.
+	\item FishEye quiere entender patrones temporales e inferir qué puede estar pasando en el mercado pesquero de Oceanus dado el comportamiento ilegal y el consecuente cierre de \emph{SouthSeafood Express Corp}. 
+	\item La naturaleza competitiva del mercado pesquero de Oceanus puede llevar a reacciones agresivas para capturar el negocio de \emph{SouthSeafood Express Corp}
+	\item Otra reacciones puedena deberse a la toma de conciencia de que la pesca ilegal no pasa desapercibida.
+\end{itemize}
+
+
+
+The business community in Oceanus is dynamic with new startups, mergers, acquisitions, and investments. FishEye International closely watches business records to keep tabs on commercial fishing operators. FishEye’s goal is to identify and prevent illegal fishing in the region’s sensitive marine ecosystem. Analysts are working with company records that show ownership, shareholders, transactions, and information about the typical products and services of each entity. FishEye’s analysts have a hybrid automated/manual process to transform the data into CatchNet: the Oceanus Knowledge Graph.
+
+In the past year, Oceanus’s commercial fishing business community was rocked by the news that SouthSeafood Express Corp was caught fishing illegally. FishEye wants to understand temporal patterns and infer what may be happening in Oceanus’s fishing marketplace because of SouthSeafood Express Corp’s illegal behavior and eventual closure. The competitive nature of Oceanus’s fishing market may cause some businesses to react aggressively to capture SouthSeafood Express Corp’s business while other reactions may come from the awareness that illegal fishing does not go undetected and unpunished.
+
+
+
+\section{Tareas y preguntas}
+
+\begin{description}
+	\item[Dinámica de estructuras corporativas]
+    FishEye analysts want to better visualize changes in corporate structures over time. Create a visual analytics approach that analysts can use to highlight temporal patterns and changes in corporate structures. Examine the most active people and businesses using visual analytics.
+	\item[Transacciones típicas y atípicas]
+    Using your visualizations, find and display examples of typical and atypical business transactions (e.g., mergers, acquisitions, etc.). Can you infer the motivations behind changes in their activity?
+	\item[Pertenencia e influencia sobre compañías]
+		Develop a visual approach to examine inferences. Infer how the influence of a company changes through time. Can you infer ownership or influence that a network may have?
+	\item[Redes con \emph{SouthSeafood Express Corp}]
+    Identify the network associated with SouthSeafood Express Corp and visualize how this network and competing businesses change as a result of their illegal fishing behavior. Which companies benefited from SouthSeafood Express Corp legal troubles? Are there other suspicious transactions that may be related to illegal fishing? Provide visual evidence for your conclusions.
+\end{description}
+
+
+\section{Datos}
+Se provee una base de datos no relacional en formato JSON compatible con la biblioteca de análisis de redes NetworkX \cite{noauthor_networkx_nodate}.
+
+Su estructura es
+\begin{itemize}
+	\item \emph{Links} (vértices) 
+\end{itemize}
+
+
+\section{Relaciones de pertenencia en torno a \emph{SouthSeafood Express Corp}}
+
+Una búsqueda manual de menciones de \emph{SouthSeafood Express Corp} en los vértices, nombrados enlaces (links), en la base de datos
+
+
+En la figura \ref{fig:drawio} 
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=\textwidth]{SouthSeafood.drawio.pdf}
+	\caption{Red relaciones en torno a \emph{SouthSeafood Express Corp} generada manualmente siguiendo las relaciones fuente-objetivo en las tablas sobre dueño últiom (\emph{beneficial ownership}) y tenencia de acciones (\emph{share holdership}) de la base de datos.}
+	\label{fig:drawio}
+\end{figure}
+
+
+
+\subsection{Venta de acciones de \emph{SouthSeafood Express Corp}}
+
+Es claro como 
+
+\begin{figure}[!ht]
+	\centering
+	\begin{subfigure}[b]{\textwidth}
+		\centering
+		\includegraphics[width=0.6\textwidth]{eins}
+		\caption{Al 2025-01-01}
+		\label{fig:antes}
+	\end{subfigure}
+	\begin{subfigure}[b]{\textwidth}
+		\centering
+		\includegraphics[width=0.6\textwidth]{zwei}
+		\caption{Hacía fines de 2025}
+		\label{fig:después}
+	\end{subfigure}
+	\caption{
+		Red de relaciónes en toro a \emph{SouthSeafood Express Corp} en 2025-01-01 y hacía fin de ese año.
+		La red es orientada por lo que las puntas de las flechas indican el vértice objetivo de cada arista cuyo color indica en apartado de la base de datos figura.
+		}
+	% \caption{Ahi van dos graficos generados, no fue tan facil como imagine, al final tuve que filtrar por el start_date, pero si tomaba la fecha 25/5 no quedaba grafo para despues asi que puse el 1/1, los anteriores a esa fecha, como era la red de SouthSea antes y los cambios durante el año, incluido varios registros sin start\_date}
+	\label{fig:Networkx}
+\end{figure}
+
+
+% \section{Bibliografía}
+\printbibliography[heading=bibintoc] % not numbered
+
+
+\end{document}

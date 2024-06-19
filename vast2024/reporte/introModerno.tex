@@ -1,0 +1,72 @@
+%% geometría
+\usepackage[margin=1.3cm,nohead]{geometry}
+
+
+%% castellano
+\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+%%% unidades, isótopos, notación física
+%\usepackage[locale=FR, per-mode=fraction, separate-uncertainty=true]{siunitx}
+%\sisetup{detect-all}
+%%\DeclareSIUnit\torr{torr}
+%%\DeclareSIUnit\atm{atm}
+%%\usepackage{isotope} % $\isotope[A][Z]{X}\to\isotope[A-4][Z-2]{Y}+\isotope[4][2]{\alpha}$
+%\usepackage[arrowdel]{physics}
+%
+%%% notación matemática
+%\usepackage{amsmath}
+%\usepackage{amstext}
+%\usepackage{amssymb}
+
+
+%% figuras, inclusión
+\usepackage{graphicx}
+\graphicspath{{./graphs/}}
+\usepackage{subcaption}
+
+
+%%% gráficos por código
+%\usepackage{tikz}
+%\usetikzlibrary{decorations.pathmorphing}
+%\usetikzlibrary{patterns}
+%% \input{DimLinesTikz}
+
+
+%% pie de página
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead{}
+\fancyfoot{{\tiny}}
+% \fancyfoot{{\tiny \textcopyright V. A. Bettachini}}
+% \fancyfoot{{\tiny \textcopyright Universidad Provincial de Ezeiza}}
+\fancyfoot[C]{ {\tiny Actualizado al \today} }
+\fancyfoot[R]{Pág. \thepage/\pageref{LastPage}}
+% \fancyfoot[RO, LE]{Pág. \thepage/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+
+%% enlaces
+\usepackage{hyperref}	% enlaces sin borde rojo y en negro
+\hypersetup{ 
+    colorlinks=true,
+    allcolors= black
+}
+
+
+%% cuadros (tablas)
+\usepackage{float}
+\usepackage{booktabs} % table rules
+\usepackage{multicol}	% tablas de multiples columnas
+
+
+%% bibliografía
+\usepackage[style=numeric, backend=biber, sorting= none, url= true, maxnames=20]{biblatex}
+\DefineBibliographyStrings{spanish}{}
+% \usepackage{textgreek} % https://tex.stackexchange.com/questions/107352/non-ascii-characters-in-biblatex 
+\addbibresource{vast2024.bib}
