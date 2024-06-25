@@ -155,13 +155,76 @@ Es claro como
 		\label{fig:después}
 	\end{subfigure}
 	\caption{
-		Red de relaciónes en toro a \emph{SouthSeafood Express Corp} en 2025-01-01 y hacía fin de ese año.
+		Red de relaciones en toro a \emph{SouthSeafood Express Corp} en 2025-01-01 y hacía fin de ese año.
 		La red es orientada por lo que las puntas de las flechas indican el vértice objetivo de cada arista cuyo color indica en apartado de la base de datos figura.
 		}
 	% \caption{Ahi van dos graficos generados, no fue tan facil como imagine, al final tuve que filtrar por el start_date, pero si tomaba la fecha 25/5 no quedaba grafo para despues asi que puse el 1/1, los anteriores a esa fecha, como era la red de SouthSea antes y los cambios durante el año, incluido varios registros sin start\_date}
 	\label{fig:Networkx}
 \end{figure}
+\vspace{3cm}
 
+\subsection{Patrones temporales y cambios en las estructuras corporativas}
+
+Se realizan scatterplots con la cantidad de enlaces significativo, esto es la cantidad de links que tienen los nodos vinculados a al periodo del año 2035, versus la cantidad de enlaces que tienen los mismos nodos relacionados a periodos anteriores de tiempo utilizando la técnica de jitter para poder individualizar los puntos superpuestos. Los puntos más a la derecha se relacionas con las personas y empresas más activas durante el periodo de análisis.  
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{graphs/ejercicio_1_2.png}
+    \caption{Personas más activas. La versión interactiva de esta figura es un html que debe descargarse de \href{https://github.com/bettachini/visualizacion/blob/main/vast2024/reporte/graphs/scatter_plot_degree_in_vs_out_period_persons_jitter.html.}{(este enlace)}
+    }
+    \label{fig:enter-label}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{graphs/ejercicio_1_1.png}
+    \caption{Empresas más activas. La versión interactiva de esta figura es un html que debe descargarse de \href{https://github.com/bettachini/visualizacion/blob/main/vast2024/reporte/graphs/scatter_plot_degree_in_vs_out_period_companies_jitter.html}{(este enlace)}}
+    \label{fig:enter-label}
+\end{figure}
+
+
+\subsection{Transacciones típicas y atípicas}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{graphs/ejercicio_2_0_.png}
+    \caption{Resumen por tipo de transacción y entidades involucradas}
+    \label{fig:enter-label}
+\end{figure}
+
+En la tabla de arriba se puede observar el tipo y cantidad de transacciones que se realizaron durante el año 2035 en la comunidad de Oceanus, discriminado por las entidades target y source involucradas en las mismas, también figura el porcentaje que representa la misma con respecto a la totalidad de las realizadas durante ese año y en al última columna figura la relación entre ese porcentaje y el porcentaje total que existe de ese tipo de transacción (tipo de transacción, tipo de entidad source y target) en la base de datos.
+
+Ejemplos de transacciones comerciales típicas y atípicas (por ejemplo, fusiones, adquisiciones, etc.). ¿Puedes inferir las motivaciones detrás de los cambios en su actividad?
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{graphs/ejercicio_2_1.png}
+    \caption{Ejemplo transacciones típicas}
+    \label{fig:enter-label}
+\end{figure}
+
+
+Transacción Típica: Venta y Compra de Empresas
+Es común observar en una buena cantidad de los movimientos durante el periodo observado donde una persona vende sus acciones o la propiedad de una empresa mientras simultáneamente adquiere una nueva entidad. Este tipo de transacción puede ser motivado por diversas razones estratégicas y financieras.
+
+Imaginemos el caso de Alexis Turner, quien recientemente vendió su participación en Singh-Williamson, una compañía establecida con una trayectoria financiera consolidada. Al mismo tiempo, Alexis adquirió Arvaros, una empresa relativamente nueva que aún no ha declarado ganancias significativas en el último año fiscal.
+
+Esta transacción es típica en el sentido de que Alexis optó por diversificar su cartera de inversiones. Al vender en una empresa con estabilidad financiera probada como Singh-Williamson, podría asegurar ganancias acumuladas mientras transfiere sus recursos a Arvaros, una empresa que, aunque nueva en el mercado, podría tener un potencial de crecimiento considerable en el futuro.
+
+Transacción Atípica: Compra de Acciones para Ocultar Propietarios
+Por otro lado, existen transacciones menos convencionales que podrían tener motivaciones menos claras. Tomemos el ejemplo reciente de SouthSeafood Express Corp, una empresa de pesca marítima que adquirió acciones significativas en AguaLeska Transit N.V. y Tainamarine Fishing Co.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{graphs/ejercicio_2_2.png}
+    \caption{Ejemplo transacción atípica}
+    \label{fig:enter-label}
+\end{figure}
+
+Estas adquisiciones podrían no solo representar una expansión estratégica en el sector pesquero, sino también levantar interrogantes sobre la intención de ocultar la verdadera propiedad de SouthSeafood Express Corp. Al comprar y vender acciones entre varias entidades, especialmente cuando una de ellas es relativamente nueva como AguaLeska Transit N.V., la empresa podría estar utilizando estas transacciones para enmascarar a los verdaderos propietarios o para evadir ciertas obligaciones regulatorias.
+
+Estos casos atípicos subrayan la importancia de una diligencia debida exhaustiva en las transacciones comerciales. Es crucial para los reguladores y partes interesadas comprender las motivaciones detrás de tales movimientos financieros para garantizar la transparencia y la integridad del mercado.
 
 % \section{Bibliografía}
 \printbibliography[heading=bibintoc] % not numbered
