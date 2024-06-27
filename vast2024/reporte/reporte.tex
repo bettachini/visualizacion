@@ -171,7 +171,8 @@ Inicialmente, un gráfico de barras apiladas permitió representar la media anua
   \label{fig:medias_eventos}
 \end{figure}
 
-Posteriormente, se realizó un análisis detallado de beneficialownership, mediante un gráfico de líneas, que ilustra la media anual de eventos entre 2005 y 2035. En este gráfico se muestra un pico en 2034, lo que indica un año de intensa actividad en este dominio específico, contenidos en las figuras \ref{fig:beneficial_ownership_2005_2035} y \ref{fig:sharedholdership_top_anio}.
+La media anual de eventos entre 2005 y 2035 de beneficialownership muestra incremento marcado en los úlimos años con un pico en 2034, como se aprecia en la figura \ref{fig:beneficial_ownership_2005_2035}.
+Algo similar muestra la figura \ref{fig:sharedholdership_top_anio} para shareholdership con un incremento hasta el último año de registro.
 
 \begin{figure}[H]
   \centering
@@ -283,28 +284,28 @@ Para profundizar en el análisis, se examinaron los tipos de entity que se convi
 \end{figure}
 
 
-Haciendo foco en eventos de worksfor, la cantidad de contrataciones por año y como este número cambia. Para revisar esto, se crea un gráfico de barras para muestrar el aumento de la media de contrataciones en 2034, similar a los patrones observados en otros tipos de eventos, como se muestra en las figuras \ref{fig:contrataciones_2001_2035} y \ref{fig:contrataciones_2001_2035_v2}.
+Observando los eventos de worksfor, la cantidad de contrataciones por año y como este número cambia. Para revisar esto, se crea un gráfico de barras para mostrar el aumento de la media de contrataciones en 2034, similar a los patrones observados en otros tipos de eventos, como se muestra en las figuras \ref{fig:contrataciones_2001_2035} y \ref{fig:contrataciones_2001_2035_v2}.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.7\linewidth]{graphs/promedio_cambio_contrataciones.png}
-  \caption{Gráfico de línea mostrando la media anual de contrataciones (worksfor) por empresa, destacando el aumento en 2034.}
+  \caption{Media anual de contrataciones (worksfor) por empresa, destacando el aumento en 2034.}
   \label{fig:contrataciones_2001_2035}
 \end{figure}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.7\linewidth]{graphs/promedio_cambio_contrataciones_v2.png}
-  \caption{Gráfico de línea mostrando la media anual de contrataciones (worksfor) por empresa, destacando el aumento en 2034.}
+  \caption{Media anual de contrataciones (worksfor) por empresa, destacando el aumento en 2034.}
   \label{fig:contrataciones_2001_2035_v2}
 \end{figure}
 
-Posteriormente, se utilizó un gráfico de dispersión para mostrar la cantidad de contrataciones que cada empresa realizó por año. Se destacaron las empresas principales de cada año, y cuando había más de una empresa líder, se agruparon bajo la leyenda ``Otros", como se observa en la figura \ref{fig:dispersion_contrataciones}.
+Se utilizó un gráfico de dispersión para mostrar la cantidad de contrataciones que cada empresa realizó por año, observable en la figura \ref{fig:dispersion_contrataciones}. De este resultado se destacaron las empresas principales de cada año y cuando existe más de una empresa líder y fueron agrupadas bajo la leyenda ``Otros".
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.7\linewidth]{graphs/dispersion_contrataciones_top_anio.png}
-  \caption{Gráfico de dispersión mostrando las empresas con más contrataciones (worksfor) por año, destacando la empresa líder de cada año.}
+  \caption{Empresas con más contrataciones (worksfor) por año, destacando la empresa líder de cada año.}
   \label{fig:dispersion_contrataciones}
 \end{figure}
 
@@ -313,7 +314,7 @@ Para un análisis más detallado, se filtraron y listaron las 5 empresas con má
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.7\linewidth]{graphs/tabla_top_contratasciones_anio.png}
-  \caption{Tabla mostrando las 5 empresas con más contrataciones (worksfor) y el año de mayor actividad.}
+  \caption{Empresas con más contrataciones (worksfor) y el año de mayor actividad.}
   \label{fig:top_contrataciones}
 \end{figure}
 
@@ -329,7 +330,7 @@ Esta aproximación visual y analítica ofrece un análisis detallado de las cont
     \label{fig:enter-label3}
 \end{figure}
 
-En la tabla \ref{fig:enter-label3} se puede observar el tipo y cantidad de transacciones que se realizaron durante el año 2035 en la comunidad de Oceanus, discriminado por las entidades target y source involucradas en las mismas, también figura el porcentaje que representa la misma con respecto a la totalidad de las realizadas durante ese año y en al última columna figura la relación entre ese porcentaje y el porcentaje total que existe de ese tipo de transacción (tipo de transacción, tipo de entidad source y target) en la base de datos.
+En la Figura \ref{fig:enter-label3} se puede observar el tipo y cantidad de transacciones que se realizaron durante el año 2035 en la comunidad de Oceanus, discriminado por las entidades target y source involucradas en las mismas, también figura el porcentaje que representa la misma con respecto a la totalidad de las realizadas durante ese año y en al última columna figura la relación entre ese porcentaje y el porcentaje total que existe de ese tipo de transacción (tipo de transacción, tipo de entidad source y target) en la base de datos.
 
 La tabla que reproduce la figura \ref{fig:enter-label4} muestra ejemplos de transacciones comerciales típicas y atípicas (por ejemplo, fusiones, adquisiciones, etc.), que pueden atender a la pregunta de si ``¿Pueden inferirse las motivaciones detrás de los cambios en su actividad?''
 
@@ -354,7 +355,7 @@ Por otro lado, existen transacciones menos convencionales que podrían tener mot
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{graphs/ejercicio_2_2.png}
-    \caption{Ejemplo transacción atípica}
+    \caption{Transacción atípica}
     \label{fig:enter-label5}
 \end{figure}
 
@@ -370,39 +371,42 @@ Para abordar este problema, se generaron tres gráficos para cada medida de cent
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.7\linewidth]{graphs/eigenvector_centralidad_tiempo.png}
-  \caption{Ejemplo de gráfico de evolución de centralidad de autovector para las empresas con más cambios.}
+  \caption{Evolución de centralidad de autovector para las empresas con más cambios.}
 \end{figure}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.7\linewidth]{graphs/grado_centralidad_tiempo.png}
-  \caption{Ejemplo de gráfico de evolución de centralidad de grado para las empresas con más cambios.}
+  \caption{Evolución de centralidad de grado para las empresas con más cambios.}
 \end{figure}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.7\linewidth]{graphs/between_centralidad_tiempo.png}
-  \caption{Ejemplo de gráfico de evolución de centralidad de intermediación para las empresas con más cambios.}
+  \caption{Evolución de centralidad de intermediación para las empresas con más cambios.}
 \end{figure}
 
-En los gráficos abajo, usando el ejemplo de la empresa Vásquez-González, podemos observar que casi 20 años después de su fundación, en 2010 comenzó a tener más influencia en la red. Analizando los datos, parece que esto ocurrió debido a un cambio de propiedad a McPherson-Wright, ya que aumentó de 0.1 a 0.6 en un solo período, mostrando un crecimiento rápido. Después de un tiempo, su influencia disminuyó, la empresa fue vendida a otra persona y luego volvió a aumentar. Hasta que en 2020 comenzó a disminuir y se estabilizó con una influencia que se imagina como la normal. Incluso con una influencia baja, mantuvo grados y centralidad más estables, y se pudo inferir cosas sobre la propiedad también.
+En los gráficos siguientes mostrados en las figuras \ref{fig:cent_grado_a_VG}, \ref{fig:cent_grado_g_VG} y \ref{fig:cent_grado_i_VG}, se puede notar, que al usa el ejemplo de la empresa Vásquez-González, podemos observar que casi 20 años después de su fundación, en 2010 comenzó a tener más influencia en la red. Analizando los datos, parece que esto ocurrió debido a un cambio de propiedad a McPherson-Wright, ya que aumentó de 0.1 a 0.6 en un solo período, mostrando un crecimiento rápido. Después de un tiempo, su influencia disminuyó, la empresa fue vendida a otra persona y luego volvió a aumentar. Hasta que en 2020 comenzó a disminuir y se estabilizó con una influencia que se imagina como la normal. Incluso con una influencia baja, mantuvo grados y centralidad más estables, y se pudo inferir cosas sobre la propiedad también.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.7\linewidth]{graphs/eigenvector_centralidad_tiempo_vasquez.png}
-  \caption{Ejemplo de gráfico de evolución de centralidad de autovector para la empresa Vasquez-Gonzalez.}
+  \caption{Evolución de centralidad de autovector para la empresa Vasquez-Gonzalez.}
+  \label{fig:cent_grado_a_VG}
 \end{figure}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.7\linewidth]{graphs/grado_centralidad_tiempo_vasquez.png}
-  \caption{Ejemplo de gráfico de evolución de centralidad de grado para la empresa Vasquez-Gonzalez.}
+  \caption{Evolución de centralidad de grado para la empresa Vasquez-Gonzalez.}
+  \label{fig:cent_grado_g_VG}
 \end{figure}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.7\linewidth]{graphs/between_centralidad_tiempo_vasquez.png}
-  \caption{Ejemplo de gráfico de evolución de centralidad de intermediación para la empresa Vasquez-Gonzalez.}
+  \caption{Evolución de centralidad de intermediación para la empresa Vasquez-Gonzalez.}
+  \label{fig:cent_grado_i_VG}
 \end{figure}
 
 \paragraph{Inferencia de propiedad:}
@@ -416,7 +420,7 @@ En este estudio, analizamos los cambios en la estructura de la red después del 
 
 \section{Análisis de Centralidad}
 
-Los gráficos de barras muestran las medidas de centralidad (grado, Betweenness y autovector) antes y después del incidente para cada empresa. Se observa que tanto el grado como el Betweenness disminuyeron considerablemente para todas las empresas después del incidente. Sin embargo, el autovector, aunque disminuyó para algunas empresas, aumentó sustancialmente para la empresa Polak, que no era prominente en este aspecto antes del incidente, pero ahora posee el mayor autovector entre todas las empresas.
+Los gráficos de las figuras \ref{fig:cent_grado}, \ref{fig:cent_Betweenness} y \ref{fig:cent_autovector}, muestran las medidas de centralidad (grado, Betweenness y autovector) antes y después del incidente para cada empresa. Se observa que tanto el grado como el Betweenness disminuyeron considerablemente para todas las empresas después del incidente. Sin embargo, el autovector, aunque disminuyó para algunas empresas, aumentó sustancialmente para la empresa Polak, que no era prominente en este aspecto antes del incidente, pero ahora posee el mayor autovector entre todas las empresas.
 
 \subsection{Centralidad de Grado}
 
