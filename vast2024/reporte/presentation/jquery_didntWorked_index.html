@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plotly.js Presentation</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+		<script src="jquery.js"></script> 
+    <script> 
+		$(function(){
+      $("#includedContent").load("emaciated_scatter_plot_degree_in_vs_out_period_companies_jitter.html"); 
+    });
+    </script> 
+</head>
+<body>
+    <div class="slide">
+        <h1>VAST 2024 | Mini reto 3 | Análisis temporal | Grupo 2</h1>
+        <p>This is an example slide.</p>
+    </div>
+
+		<div class="slide">
+        <h2>Red de relaciones de tenencia de acciones (shareholdership) y beneficiario o dueño real (beneficial
+ownership) partiendo de SouthSeafood Express Corp</h2>
+    <img src="../graphs/SouthSeafood.drawio.png" alt="Descriptive Alt Text" id="slideImage">
+    </div>
+
+    <div class="slide" id="slide2">
+        <h2>Empresas más activas</h2>
+				<div id="includedContent"></div>
+    </div>
+		
+		<div class="slide" id="slide2">
+        <h2>Slide 3: Plotly Chart</h2>
+        <div id="plot"></div>
+    </div>
+
+    <div class="slide">
+        <h2>Slide 4: Conclusion</h2>
+        <p>Thank you for attending the presentation.</p>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
